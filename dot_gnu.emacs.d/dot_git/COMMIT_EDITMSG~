@@ -1,0 +1,28 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Changes to be committed:
+#	modified:   config.org
+#
+# Changes not staged for commit:
+#	deleted:    lisp/buffer-stack-suppl.el
+#	deleted:    lisp/buffer-stack.el
+#	deleted:    lisp/iflipb.el
+#	deleted:    lisp/vterm-toggle.el
+#
+# Untracked files:
+#	.lsp-session-v1
+#	auto-save-list/
+#	config.el
+#	config.el~
+#	config.org~
+#	elpa/
+#	init.el
+#	init.el~
+#	lisp_files/
+#	recentf
+#	smex-items
+#	transient/
+#

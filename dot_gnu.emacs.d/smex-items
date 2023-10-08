@@ -1,0 +1,36 @@
+
+;; ----- smex-history -----
+(
+ ibuffer
+ magit
+ kill-buffer
+ git-timemachine
+ git-timemachine-toggle
+ hl-todo-mode
+ package-install
+)
+
+;; ----- smex-data -----
+(
+ (package-list-packages . 1)
+ (lsp . 6)
+ (lsp-treemacs-errors-list . 3)
+ (dashboard-open . 1)
+ (tab-bar-mode . 4)
+ (load-file . 2)
+ (ibuffer . 2)
+ (package-install . 9)
+ (lsp-ui-mode . 2)
+ (lsp-ui-imenu . 2)
+ (lsp-diagnose . 1)
+ (lsp-ui-peek-mode . 2)
+ (git-timemachine . 9)
+ (git-timemachine-help . 3)
+ (magit . 14)
+ (pixel-scroll-precision-mode . 2)
+ (hl-todo-mode . 4)
+ (git-timemachine-mode . 3)
+ (git-timemachine-toggle . 2)
+ (eww-buffer-kill . 1)
+ (kill-buffer . 1)
+)
