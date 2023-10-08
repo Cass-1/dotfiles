@@ -2,11 +2,15 @@
 My dotfiles
 
 ## Current Dotfiles
- - GNU emacs
- - Doom emacs
- - Qtile
- - Neovim
- - Libinput-Gestures
+ - Text Editors
+    - GNU emacs
+    - Doom emacs
+    - Neovim
+ - Window Managers
+    - Qtile
+    - i3
+ - Other
+    - Libinput-Gestures
 
 ## Setup using chezmoi
  - https://www.chezmoi.io/
