@@ -1,5 +1,13 @@
 # dotfiles
 My dotfiles
 
-### Setup using chezmoi
- - https://www.chezmoi.io/
+## Setup using chezmoi
+https://www.chezmoi.io/
+
+### If I edit dotfiles outside of chezmoi
+1. chezmoi merge /path/to/edited/file
+2. do a git merge
+3. chezmoi cd
+4. git add .
+5. git commit -m "message"
+6. git pull && git push
