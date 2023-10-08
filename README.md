@@ -1,6 +1,13 @@
 # dotfiles
 My dotfiles
 
+## Current Dotfiles
+ - GNU emacs
+ - Doom emacs
+ - Qtile
+ - Neovim
+ - Libinput-Gestures
+
 ## Setup using chezmoi
  - https://www.chezmoi.io/
 
