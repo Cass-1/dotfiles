@@ -37,7 +37,7 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
-(setq-default line-spacing 0.12)
+(setq-default line-spacing 0.25)
 
 
 ;; If you use `org' and don't want your org files in the default location below,
@@ -81,3 +81,12 @@
 (map! :leader
       :desc "View Schedule List"
       "z" #'org-agenda-list)
+
+;; python language server
+;; to get this to work I had to install pyright with pacaman, add this block
+;; run ./doom env, and then completely restart doom emacs (not h r r)
+(use-package! lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
