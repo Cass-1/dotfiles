@@ -22,4 +22,4 @@ My dotfiles
 4. git add .
 5. git commit -m "message"
 6. git pull && git push
-7. exit      <-- exits chezmoi
+7. exit &emsp;&emsp;&emsp;&emsp; <-- exits chezmoi
