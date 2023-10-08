@@ -2,7 +2,7 @@
 My dotfiles
 
 ## Setup using chezmoi
-https://www.chezmoi.io/
+ - https://www.chezmoi.io/
 
 ### If I edit dotfiles outside of chezmoi
 1. chezmoi merge /path/to/edited/file
