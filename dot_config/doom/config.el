@@ -76,3 +76,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; keybindings
+(map! :leader
+      :desc "View Schedule List"
+      "z" #'org-agenda-list)
