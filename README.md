@@ -11,6 +11,7 @@ My dotfiles
     - i3
  - Other
     - Libinput-Gestures
+    - Favorite Icons of Mine
 
 ## Setup using chezmoi
  - https://www.chezmoi.io/
