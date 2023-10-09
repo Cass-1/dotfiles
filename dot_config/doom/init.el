@@ -84,7 +84,7 @@
        (spell
         +flyspell
         +hunspell) ; tasing you for misspelling mispelling, NOTE had to install hunspell-en_us with pacman
-       grammar           ; tasing grammar mistake every you make
+       grammar           ; tasing grammar mistake every you make NOTE had to install languagetool with pacman
 
        :tools
        ;;ansible
