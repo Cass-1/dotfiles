@@ -90,3 +90,14 @@
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
+
+;; adding todo keywords
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "|" "DONE" "REMOVED")))
+
+;; org-auto-tangle
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))
