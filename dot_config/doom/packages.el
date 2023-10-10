@@ -54,3 +54,6 @@
 
 ;; images in orgmode
 (package! org-download)
+
+;; org superstar (like org bullets)
+(package! org-superstar)

@@ -102,4 +102,30 @@
   :config
   (setq org-auto-tangle-default t))
 
+
 (use-package! org-download)
+
+;; org superstar
+(use-package! org-superstar
+  :config
+  (setq org-superstar-headline-bullets-list '("◉" "○" "■" "◆" "▲" "▶"))
+)
+  (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+
+;; (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+
+;; setting heading sizes
+;; (custom-set-faces
+;;   '(org-level-1 ((t (:inherit outline-1 :height 1.2))))
+;;   '(org-level-2 ((t (:inherit outline-2 :height 1.2))))
+;;   '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
+;;   '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
+;;   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+;; )
+(custom-theme-set-faces!
+'doom-one
+'(org-level-4 :inherit outline-4 :height 1.1)
+'(org-level-3 :inherit outline-3 :height 1.1)
+'(org-level-2 :inherit outline-2 :height 1.2)
+'(org-level-1 :inherit outline-1 :height 1.2)
+)
