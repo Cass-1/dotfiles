@@ -51,3 +51,6 @@
 
 ;; auto tangle
 (package! org-auto-tangle)
+
+;; images in orgmode
+(package! org-download)
