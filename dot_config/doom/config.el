@@ -36,8 +36,8 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
-(setq-default line-spacing 0.25)
+(setq display-line-numbers-type `visual)
+(setq-default line-spacing 0.5)
 
 
 ;; If you use `org' and don't want your org files in the default location below,
@@ -92,8 +92,8 @@
                           (lsp))))  ; or lsp-deferred
 
 ;; adding todo keywords
-(setq org-todo-keywords
-      '((sequence "TODO" "DOING" "|" "DONE" "REMOVED")))
+;; (setq org-todo-keywords
+;;       '((sequence "TODO" "DOING" "|" "DONE" "REMOVED")))
 
 ;; org-auto-tangle
 (use-package! org-auto-tangle
@@ -124,8 +124,79 @@
 ;; )
 (custom-theme-set-faces!
 'doom-one
-'(org-level-4 :inherit outline-4 :height 1.1)
-'(org-level-3 :inherit outline-3 :height 1.1)
-'(org-level-2 :inherit outline-2 :height 1.2)
-'(org-level-1 :inherit outline-1 :height 1.2)
+'(org-level-4 :inherit outline-4 :height 1.0)
+'(org-level-3 :inherit outline-3 :height 1.0)
+'(org-level-2 :inherit outline-2 :height 1.0)
+'(org-level-1 :inherit outline-1 :height 1.0)
 )
+
+;; centaur tabs
+;; (after! centaur-tabs)
+
+;; (use-package! centaur-tabs
+;;   :config
+;;   (setq centaur-tabs-set-bar 'over)
+;; )
+
+;; (use-package! mission-control
+;;   :config
+;;   (mcon-c-tab-setup-binding))
+
+;; (use-package! mission-control
+;;   :config
+;;   (mcon-c-tab-setup-binding))
+
+
+;; (require good-scroll)
+;; (after! good-scroll)
+;; (use-package! good-scroll
+;;   :config
+;;   (setq good-scroll-mode 1))
+
+;; scrolling
+ (setq redisplay-dont-pause t
+  scroll-margin 1
+  scroll-step 1
+  scroll-conservatively 10000
+  scroll-preserve-screen-position 1
+  )
+
+
+;; tab to move through buffers
+;; (global-set-key (kbd "C-iso-left-tab") 'previous-buffer)
+;; (map!
+;;   "C TAB" #'iflipb-next-buffer
+;;   "C iso-left-tab" #'iflipb-previous-buffer
+ ;; (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
+ ;; 'iflipb-previous-buffer)
+(use-package! iflipb)
+;; (map!
+;;         "C-a" #'iflipb-next-buffer
+;;         "C-q" #'iflipb-previous-buffer
+;; )
+;; (global-set-key [f1] 'iflipb-next-buffer)
+;; (global-set-key [f2] 'iflipb-previous-buffer)
+;; (global-set-key (kbd "C-<tab>") 'iflipb-next-buffer) ;; never worked
+;; (global-set-key
+;;  (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))  ;; worked
+;;  'iflipb-previous-buffer)
+
+;; (global-set-key
+;;  (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))  ;; worked
+;;  '+vterm/toggle)
+(global-set-key (kbd "M-[") 'iflipb-previous-buffer)
+(global-set-key (kbd "M-]") 'iflipb-next-buffer)
+(after! treemacs
+(with-eval-after-load 'treemacs
+  (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
+)
+
+(global-set-key [f2] '+treemacs/toggle)
+(global-set-key (kbd "C-`") '+vterm/toggle)
+(after! vterm
+  ;; (set-popup-rule! "*doom:vterm-popup:main" :size 0.4 :vslot -4 :select t :quit nil :ttl 0 :side 'right)
+  (set-popup-rule! "*doom:vterm-popup" :size 0.4 :vslot -4 :select t :quit nil :ttl 0 :side 'right)
+)
+
+(global-set-key (kbd "<mouse-8>") 'iflipb-previous-buffer)
+(global-set-key (kbd "<mouse-9>") 'iflipb-next-buffer)

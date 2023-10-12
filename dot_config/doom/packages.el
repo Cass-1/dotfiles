@@ -57,3 +57,14 @@
 
 ;; org superstar (like org bullets)
 (package! org-superstar)
+
+;; mission control
+;; (package! mission-control)
+;; (package! mission-control
+;;   :recipe (:local-repo "lisp/"))
+
+;; (package! good-scroll)
+
+(package! good-scroll)
+
+(package! iflipb)
