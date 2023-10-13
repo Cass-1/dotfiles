@@ -68,3 +68,5 @@
 (package! good-scroll)
 
 (package! iflipb)
+(package! zenburn-theme)
+(package! spacegray-theme)

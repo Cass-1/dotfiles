@@ -33,17 +33,18 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
+; (setq doom-font '(font-spec :family "JetBrains Mono NF" :size 24))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `visual)
-(setq-default line-spacing 0.5)
+(setq-default line-spacing .5)
 
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
-
+; (setq doom-font (font-spec :family "JetBrains Mono NF" :size 24))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -125,9 +126,9 @@
 (custom-theme-set-faces!
 'doom-one
 '(org-level-4 :inherit outline-4 :height 1.0)
-'(org-level-3 :inherit outline-3 :height 1.0)
-'(org-level-2 :inherit outline-2 :height 1.0)
-'(org-level-1 :inherit outline-1 :height 1.0)
+'(org-level-3 :inherit outline-3 :height 1.1)
+'(org-level-2 :inherit outline-2 :height 1.2)
+'(org-level-1 :inherit outline-1 :height 1.3)
 )
 
 ;; centaur tabs
@@ -160,7 +161,14 @@
   scroll-conservatively 10000
   scroll-preserve-screen-position 1
   )
-
+;; (load "mwheel")
+;; (mwheel-install)
+;; (mouse-wheel-mode 1)
+;; (setq mouse-wheel-progressive-speed nil)
+;; (setq redisplay-dont-pause t)
+;; (setq mouse-wheel-scroll-amount
+;;       '(1 ((shift) . 1)
+;;           ((control) . nil)))
 
 ;; tab to move through buffers
 ;; (global-set-key (kbd "C-iso-left-tab") 'previous-buffer)
@@ -198,5 +206,5 @@
   (set-popup-rule! "*doom:vterm-popup" :size 0.4 :vslot -4 :select t :quit nil :ttl 0 :side 'right)
 )
 
-(global-set-key (kbd "<mouse-8>") 'iflipb-previous-buffer)
-(global-set-key (kbd "<mouse-9>") 'iflipb-next-buffer)
+(global-set-key (kbd "<mouse-8>") 'iflipb-next-buffer)
+(global-set-key (kbd "<mouse-9>") 'iflipb-previous-buffer)
