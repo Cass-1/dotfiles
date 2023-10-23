@@ -7,7 +7,6 @@ My dotfiles
     - Doom emacs
     - Neovim
  - Window Managers
-    - Qtile
     - i3
  - Other
     - Libinput-Gestures
